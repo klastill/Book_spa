@@ -6,7 +6,6 @@ import "./App.css"
 import Bestseller from './routes/Bestseller';
 import BrandNew from './routes/BrandNew';
 import Wise from './routes/Wise';
-
 function App() {
   return <HashRouter>
       <div className="nav_box">

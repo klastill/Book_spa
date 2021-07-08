@@ -9,10 +9,11 @@ class Bestseller extends React.Component {
     books: []
   };
   getBestList = async () => {
-    const listURL = "/ttb/api/ItemList.aspx?";
+    const listURL = "https://cors-anywhere.herokuapp.com/http://www.aladin.co.kr/ttb/api/ItemList.aspx?";
     const ttb = "ttbkey=ttbgyb05011150001";
     let query = "&SearchTarget=Book&QueryType=BestSeller&MaxResults=50&Cover=Big&&output=js&Version=20131101&start=1";
     let url = listURL + ttb + query;
+    console.log(url);
     const {data: {item}} = await axios.get(url);
     this.setState({books: item, isLoading: false});
   }
